@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXJ-hh-5wk">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iOS Internship App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Start_WebPower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j89-Mj-mSF">
+                                <rect key="frame" x="20" y="64" width="374" height="622"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KeV-oh-pIe">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="306"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="webmaster_logo" translatesAutoresizingMaskIntoConstraints="NO" id="caC-Sx-byO">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="306"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vmK-v6-Cyr">
+                                        <rect key="frame" x="0.0" y="316" width="374" height="306"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eEX-hE-PEH">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="189.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAA-zw-ngR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="82.333333333333329"/>
+                                                        <color key="backgroundColor" red="0.90588235289999997" green="0.08235294118" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Регистрация"/>
+                                                        <connections>
+                                                            <segue destination="fAK-tc-cZe" kind="presentation" modalPresentationStyle="fullScreen" id="fEw-uM-AR6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXc-9R-BlW">
+                                                        <rect key="frame" x="0.0" y="107.33333333333331" width="374" height="82.333333333333314"/>
+                                                        <color key="backgroundColor" red="0.90588235289999997" green="0.08235294118" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Авторизация"/>
+                                                        <connections>
+                                                            <segue destination="EhU-Xz-Ed6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="e9n-ks-5Tp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9ZC-Ld-byt">
+                                                <rect key="frame" x="0.0" y="214.66666666666666" width="374" height="91.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-OP-TYF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="91.333333333333329"/>
+                                                        <color key="backgroundColor" red="0.90588235289999997" green="0.08235294118" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Данные пользователя"/>
+                                                        <connections>
+                                                            <segue destination="Z4M-cS-zXq" kind="show" id="5yZ-vH-Q6Y"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j89-Mj-mSF" secondAttribute="trailing" constant="20" id="bep-pg-bkJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j89-Mj-mSF" secondAttribute="bottom" constant="50" id="h7O-ub-1n4"/>
+                            <constraint firstItem="j89-Mj-mSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tUI-GB-Zms"/>
+                            <constraint firstItem="j89-Mj-mSF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y5B-6v-LzD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS Internship App" id="eM3-yo-k36">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="mJk-yb-yvB"/>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="appButtons" destination="bmy-OP-TYF" collectionClass="NSMutableArray" id="BMl-pO-KD5"/>
+                        <outletCollection property="appButtons" destination="PXc-9R-BlW" collectionClass="NSMutableArray" id="NCV-Qo-auN"/>
+                        <outletCollection property="appButtons" destination="oAA-zw-ngR" collectionClass="NSMutableArray" id="W4I-BR-fGL"/>
+                        <outletCollection property="appButtons" destination="oAA-zw-ngR" collectionClass="NSMutableArray" id="j8w-v4-XTe"/>
+                        <outletCollection property="appButtons" destination="PXc-9R-BlW" collectionClass="NSMutableArray" id="NxS-vD-vCf"/>
+                        <outletCollection property="appButtons" destination="bmy-OP-TYF" collectionClass="NSMutableArray" id="Vut-ht-rLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="109.23913043478262"/>
+        </scene>
+        <!--Авторизация-->
+        <scene sceneID="WEO-eQ-XuX">
+            <objects>
+                <viewController id="2Yc-or-yud" customClass="AuthViewController" customModule="Start_WebPower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x9N-Qa-jZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="doq-sp-jOx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Авторизация" id="m2z-NC-eXH">
+                        <barButtonItem key="rightBarButtonItem" title="Закрыть" style="done" id="Ymr-M1-XY0">
+                            <connections>
+                                <action selector="authViewCloseButtonTap:" destination="2Yc-or-yud" id="Op7-Qm-mxX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpE-MR-nL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807.2463768115945" y="553.53260869565224"/>
+        </scene>
+        <!--Регистрация-->
+        <scene sceneID="OZV-O5-76H">
+            <objects>
+                <viewController id="SB5-it-JcG" customClass="RegViewController" customModule="Start_WebPower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNU-Uj-moR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="asi-DH-Ti5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Регистрация" id="iLW-th-2HL">
+                        <barButtonItem key="rightBarButtonItem" title="Закрыть" style="done" id="7gj-Rw-hdV">
+                            <connections>
+                                <action selector="regViewCloseButtonTap:" destination="SB5-it-JcG" id="pIB-xS-uWq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8S-Te-tq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807.2463768115945" y="-205.43478260869566"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Cou-yR-hab">
+            <objects>
+                <tableViewController id="Z4M-cS-zXq" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rg2-SX-zCm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="aYz-Sy-dhM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="118" id="kgA-Ni-2qO">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kgA-Ni-2qO" id="Zot-qJ-CTz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-ei-ioV">
+                                                    <rect key="frame" x="84" y="42" width="244" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Z4M-cS-zXq" id="x9l-Fi-fw0"/>
+                            <outlet property="delegate" destination="Z4M-cS-zXq" id="6HF-mu-XDi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CAq-S4-ujc">
+                        <barButtonItem key="rightBarButtonItem" title="Обновить" id="OcV-5l-I1o"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfn-NQ-LwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="870.6521739130435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g6l-BS-fQF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXJ-hh-5wk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qur-05-gPt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rFE-x1-tt4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GrJ-sh-BR1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcG-Tp-EdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kc6-S7-ax2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fAK-tc-cZe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="72W-7A-fs7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SB5-it-JcG" kind="relationship" relationship="rootViewController" id="AZm-Ni-iEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0s8-bn-Xal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="-205.43478260869566"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="26J-mB-ses">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EhU-Xz-Ed6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tml-b3-hW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Yc-or-yud" kind="relationship" relationship="rootViewController" id="Ter-Gp-XQw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbD-gy-Uo3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="553.53260869565224"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="webmaster_logo" width="414" height="105"/>
+    </resources>
+</document>

@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		44949C8623B681150069C170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C8523B681150069C170 /* AppDelegate.swift */; };
 		44949C8823B681150069C170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C8723B681150069C170 /* SceneDelegate.swift */; };
-		44949C8A23B681150069C170 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C8923B681150069C170 /* ViewController.swift */; };
 		44949C8D23B681150069C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44949C8B23B681150069C170 /* Main.storyboard */; };
 		44949C8F23B681160069C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44949C8E23B681160069C170 /* Assets.xcassets */; };
 		44949C9223B681160069C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44949C9023B681160069C170 /* LaunchScreen.storyboard */; };
+		44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9923B6ADE20069C170 /* RegViewController.swift */; };
+		44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9B23B6ADF10069C170 /* AuthViewController.swift */; };
+		44949CA023B77E050069C170 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9F23B77E050069C170 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44949C8223B681150069C170 /* Start WebPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Start WebPower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44949C8523B681150069C170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44949C8723B681150069C170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44949C8923B681150069C170 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44949C8C23B681150069C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44949C8E23B681160069C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44949C9123B681160069C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44949C9323B681160069C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44949C9923B6ADE20069C170 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		44949C9B23B6ADF10069C170 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		44949C9F23B77E050069C170 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		44949C8423B681150069C170 /* Start WebPower */ = {
 			isa = PBXGroup;
 			children = (
-				44949C8523B681150069C170 /* AppDelegate.swift */,
 				44949C8723B681150069C170 /* SceneDelegate.swift */,
-				44949C8923B681150069C170 /* ViewController.swift */,
-				44949C8B23B681150069C170 /* Main.storyboard */,
+				44949CA123B7819B0069C170 /* Controllers */,
 				44949C8E23B681160069C170 /* Assets.xcassets */,
-				44949C9023B681160069C170 /* LaunchScreen.storyboard */,
+				44949CA223B781C20069C170 /* Storyboards */,
+				44949CA323B781DC0069C170 /* Supporting Files */,
 				44949C9323B681160069C170 /* Info.plist */,
 			);
 			path = "Start WebPower";
+			sourceTree = "<group>";
+		};
+		44949CA123B7819B0069C170 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44949C9F23B77E050069C170 /* MainViewController.swift */,
+				44949C9923B6ADE20069C170 /* RegViewController.swift */,
+				44949C9B23B6ADF10069C170 /* AuthViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44949CA223B781C20069C170 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				44949C8B23B681150069C170 /* Main.storyboard */,
+				44949C9023B681160069C170 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44949CA323B781DC0069C170 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44949C8523B681150069C170 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44949C8A23B681150069C170 /* ViewController.swift in Sources */,
 				44949C8623B681150069C170 /* AppDelegate.swift in Sources */,
+				44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */,
 				44949C8823B681150069C170 /* SceneDelegate.swift in Sources */,
+				44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */,
+				44949CA023B77E050069C170 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.alik.Start-WebPower";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.alik.Start-WebPower";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Start WebPower
 //
-//  Created by Алик on 12/27/19.
+//  Created by Алик on 12/28/19.
 //  Copyright © 2019 ALIK MOLDOVANU. All rights reserved.
 //
 
@@ -14,15 +14,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         for button in appButtons {
             button.layer.cornerRadius = 10
             button.clipsToBounds = true
         }
     }
-    
-    deinit {
-        print("#ViewController -> " + #function)
-    }
-}
 
+}
