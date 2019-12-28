@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
 
         for button in appButtons {
             button.layer.cornerRadius = 10
-            button.clipsToBounds = true
+//            button.clipsToBounds = true
         }
     }
 
