@@ -62,10 +62,10 @@
 			children = (
 				44949C8723B681150069C170 /* SceneDelegate.swift */,
 				44949CA123B7819B0069C170 /* Controllers */,
-				44949C8E23B681160069C170 /* Assets.xcassets */,
 				44949CA223B781C20069C170 /* Storyboards */,
 				44949CA323B781DC0069C170 /* Supporting Files */,
 				44949C9323B681160069C170 /* Info.plist */,
+				44949C8E23B681160069C170 /* Assets.xcassets */,
 			);
 			path = "Start WebPower";
 			sourceTree = "<group>";
