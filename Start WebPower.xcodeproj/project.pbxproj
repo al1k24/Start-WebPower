@@ -15,6 +15,7 @@
 		44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9923B6ADE20069C170 /* RegViewController.swift */; };
 		44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9B23B6ADF10069C170 /* AuthViewController.swift */; };
 		44949CA023B77E050069C170 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9F23B77E050069C170 /* MainViewController.swift */; };
+		44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		44949C9923B6ADE20069C170 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		44949C9B23B6ADF10069C170 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		44949C9F23B77E050069C170 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				44949C9F23B77E050069C170 /* MainViewController.swift */,
 				44949C9923B6ADE20069C170 /* RegViewController.swift */,
 				44949C9B23B6ADF10069C170 /* AuthViewController.swift */,
+				44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				44949C8623B681150069C170 /* AppDelegate.swift in Sources */,
 				44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */,
 				44949C8823B681150069C170 /* SceneDelegate.swift in Sources */,
+				44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */,
 				44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */,
 				44949CA023B77E050069C170 /* MainViewController.swift in Sources */,
 			);

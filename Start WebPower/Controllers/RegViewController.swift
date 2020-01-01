@@ -10,8 +10,18 @@ import UIKit
 
 class RegViewController: UIViewController {
 
+    @IBOutlet var regInputView: UIView!
+    
+    @IBOutlet var regButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        regInputView.layer.cornerRadius = 10
+        regInputView.clipsToBounds = true
+        
+        regButton.layer.cornerRadius = 10
+        regButton.clipsToBounds = true
     }
     
     @IBAction func regViewCloseButtonTap(_ sender: UIBarButtonItem) {
