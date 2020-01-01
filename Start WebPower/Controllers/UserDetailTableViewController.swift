@@ -21,12 +21,24 @@ class UserDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameLabel.text = "Serii Zaebali4"
-        userAgeLabel.text = "26"
-        userActivityLabel.text = "Tra ta ta ta ta"
-
         userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
         userImageView.clipsToBounds = true
     }
 
+    //HARD HARD HARD :D
+    @IBAction func testUpdate(_ sender: UIBarButtonItem) {
+        print(#function)
+        UserService.shared.getUserInfo { [weak self] (user) in
+            guard let self = self else { return }
+            
+            self.userNameLabel.text = user.name
+            self.userAgeLabel.text = "\(user.age) лет" //форматирование сделать правильное
+            self.userActivityLabel.text = user.activity
+            
+            
+            print(user.mail)
+            
+            self.userEmailButton.setTitle(user.mail, for: .normal)
+        }
+    }
 }

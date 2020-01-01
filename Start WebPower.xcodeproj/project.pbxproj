@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447EA50023BD2D9400A3D4F8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA4FF23BD2D9400A3D4F8 /* API.swift */; };
+		447EA50223BD2F2C00A3D4F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */; };
+		447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */; };
+		447EA50723BD31B800A3D4F8 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */; };
+		447EA50923BD31C800A3D4F8 /* UserAuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */; };
+		447EA50B23BD31E900A3D4F8 /* UserRegResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */; };
+		447EA50D23BD36A100A3D4F8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50C23BD36A100A3D4F8 /* UserService.swift */; };
+		447EA50F23BD38BB00A3D4F8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */; };
 		44949C8623B681150069C170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C8523B681150069C170 /* AppDelegate.swift */; };
 		44949C8823B681150069C170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C8723B681150069C170 /* SceneDelegate.swift */; };
 		44949C8D23B681150069C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44949C8B23B681150069C170 /* Main.storyboard */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447EA4FF23BD2D9400A3D4F8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthResponse.swift; sourceTree = "<group>"; };
+		447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegResponse.swift; sourceTree = "<group>"; };
+		447EA50C23BD36A100A3D4F8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		44949C8223B681150069C170 /* Start WebPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Start WebPower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44949C8523B681150069C170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44949C8723B681150069C170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +59,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447EA4FE23BD2D6900A3D4F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				447EA50523BD318700A3D4F8 /* Models */,
+				447EA4FF23BD2D9400A3D4F8 /* API.swift */,
+				447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */,
+				447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */,
+				447EA50C23BD36A100A3D4F8 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		447EA50523BD318700A3D4F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */,
+				447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */,
+				447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */,
+				447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		44949C7923B681150069C170 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				44949C8723B681150069C170 /* SceneDelegate.swift */,
+				447EA4FE23BD2D6900A3D4F8 /* Services */,
 				44949CA123B7819B0069C170 /* Controllers */,
 				44949CA223B781C20069C170 /* Storyboards */,
 				44949CA323B781DC0069C170 /* Supporting Files */,
@@ -171,12 +211,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447EA50B23BD31E900A3D4F8 /* UserRegResponse.swift in Sources */,
+				447EA50923BD31C800A3D4F8 /* UserAuthResponse.swift in Sources */,
+				447EA50F23BD38BB00A3D4F8 /* HTTPMethod.swift in Sources */,
 				44949C8623B681150069C170 /* AppDelegate.swift in Sources */,
 				44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */,
+				447EA50223BD2F2C00A3D4F8 /* NetworkService.swift in Sources */,
 				44949C8823B681150069C170 /* SceneDelegate.swift in Sources */,
+				447EA50D23BD36A100A3D4F8 /* UserService.swift in Sources */,
 				44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */,
 				44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */,
+				447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */,
 				44949CA023B77E050069C170 /* MainViewController.swift in Sources */,
+				447EA50023BD2D9400A3D4F8 /* API.swift in Sources */,
+				447EA50723BD31B800A3D4F8 /* UserInfoResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
