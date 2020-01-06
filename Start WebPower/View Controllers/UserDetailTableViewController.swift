@@ -10,40 +10,79 @@ import UIKit
 
 class UserDetailTableViewController: UITableViewController {
     
-    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet private var table: UITableView!
     
-    @IBOutlet var userAgeLabel: UILabel!
-    @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var userActivityLabel: UILabel!
+    @IBOutlet private var userImageView: WebImageView!
+    @IBOutlet private var imageActivityIndicator: UIActivityIndicatorView!
     
-    @IBOutlet var userEmailButton: UIButton!
+    @IBOutlet private var userAgeLabel: UILabel!
+    @IBOutlet private var userNameLabel: UILabel!
+    @IBOutlet private var userActivityLabel: UILabel!
+    
+    @IBOutlet private var userEmailButton: UIButton!
+    
+    private let refreshControll: UIRefreshControl = {
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return rc
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        setupLoader()
+        
         updateUserInfoUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
         userImageView.clipsToBounds = true
-    }
-    
-    func configure(with userInfo: UserInfoResponse) {
-        userNameLabel.text = userInfo.name
-        userAgeLabel.text = "\(userInfo.age) лет" //форматирование сделать правильное
-        userActivityLabel.text = userInfo.activity
         
-        userEmailButton.setTitle(userInfo.mail, for: .normal)
+        table.refreshControl = refreshControll
     }
     
-    private func updateUserInfoUI() {
+    private func setupLoader() {
+        imageActivityIndicator.hidesWhenStopped = true
+    }
+    
+    private func updateUserInfoUI(complition: (() -> Void)? = nil) {
+        imageActivityIndicator.startAnimating()
+        
         UserService.shared.getUserInfo { [weak self] (userInfo) in
             guard let self = self else { return }
 
             self.configure(with: userInfo)
+            
+            complition?()
         }
+    }
+    
+    private func configure(with userInfo: UserInfoResponse) {
+        userNameLabel.text = userInfo.name
+        userActivityLabel.text = userInfo.activity
+        
+        userAgeLabel.text = formatAge(userInfo.age)
+        
+        userEmailButton.setTitle(userInfo.mail, for: .normal)
+        
+        userImageView.set(imageURL: userInfo.image) { [weak self] in
+            self?.imageActivityIndicator.stopAnimating()
+        }
+    }
+    
+    private func formatAge(_ age: Int) -> String {
+        switch age % 10 {
+            case 1: return "\(age) год"
+            case 2...4: return "\(age) года"
+            default: return "\(age) лет"
+        }
+    }
+    
+    @objc private func refresh(sender: UIRefreshControl) {
+        updateUserInfoUI{ sender.endRefreshing() }
     }
     
     @IBAction func updateUserInfoTableBarButtonTaped(_ sender: UIBarButtonItem) {
