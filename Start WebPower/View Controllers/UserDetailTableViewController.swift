@@ -21,24 +21,33 @@ class UserDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        updateUserInfoUI()
+    }
+    
+    func setupUI() {
         userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
         userImageView.clipsToBounds = true
     }
-
-    //HARD HARD HARD :D
-    @IBAction func testUpdate(_ sender: UIBarButtonItem) {
-        print(#function)
-        UserService.shared.getUserInfo { [weak self] (user) in
+    
+    func configure(with userInfo: UserInfoResponse) {
+        userNameLabel.text = userInfo.name
+        userAgeLabel.text = "\(userInfo.age) лет" //форматирование сделать правильное
+        userActivityLabel.text = userInfo.activity
+        
+        userEmailButton.setTitle(userInfo.mail, for: .normal)
+    }
+    
+    private func updateUserInfoUI() {
+        UserService.shared.getUserInfo { [weak self] (userInfo) in
             guard let self = self else { return }
-            
-            self.userNameLabel.text = user.name
-            self.userAgeLabel.text = "\(user.age) лет" //форматирование сделать правильное
-            self.userActivityLabel.text = user.activity
-            
-            
-            print(user.mail)
-            
-            self.userEmailButton.setTitle(user.mail, for: .normal)
+
+            self.configure(with: userInfo)
         }
     }
+    
+    @IBAction func updateUserInfoTableBarButtonTaped(_ sender: UIBarButtonItem) {
+        updateUserInfoUI()
+    }
+    
 }
