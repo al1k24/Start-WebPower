@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4407442D23C605350010A63A /* UIAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407442C23C605350010A63A /* UIAlertController + Extension.swift */; };
+		4407442F23C608E70010A63A /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407442E23C608E70010A63A /* AuthError.swift */; };
+		4407443123C60A460010A63A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407443023C60A460010A63A /* Validator.swift */; };
+		4407443323C610DD0010A63A /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407443223C610DD0010A63A /* AuthResult.swift */; };
 		447EA50023BD2D9400A3D4F8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA4FF23BD2D9400A3D4F8 /* API.swift */; };
 		447EA50223BD2F2C00A3D4F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */; };
 		447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4407442C23C605350010A63A /* UIAlertController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extension.swift"; sourceTree = "<group>"; };
+		4407442E23C608E70010A63A /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		4407443023C60A460010A63A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		4407443223C610DD0010A63A /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		447EA4FF23BD2D9400A3D4F8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
@@ -61,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4407443423C610F10010A63A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4407443223C610DD0010A63A /* AuthResult.swift */,
+				4407442E23C608E70010A63A /* AuthError.swift */,
+				4407443023C60A460010A63A /* Validator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		447EA4FE23BD2D6900A3D4F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +104,10 @@
 		447EA51423C37B6C00A3D4F8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4407443423C610F10010A63A /* Auth */,
 				447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */,
 				447EA51223C3646300A3D4F8 /* WebImageView.swift */,
+				4407442C23C605350010A63A /* UIAlertController + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4407442D23C605350010A63A /* UIAlertController + Extension.swift in Sources */,
 				447EA50B23BD31E900A3D4F8 /* UserRegResponse.swift in Sources */,
 				447EA50923BD31C800A3D4F8 /* UserAuthResponse.swift in Sources */,
 				447EA50F23BD38BB00A3D4F8 /* HTTPMethod.swift in Sources */,
@@ -231,12 +252,15 @@
 				44949C8823B681150069C170 /* SceneDelegate.swift in Sources */,
 				447EA50D23BD36A100A3D4F8 /* UserService.swift in Sources */,
 				44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */,
+				4407443123C60A460010A63A /* Validator.swift in Sources */,
 				44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */,
+				4407443323C610DD0010A63A /* AuthResult.swift in Sources */,
 				447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */,
 				44949CA023B77E050069C170 /* MainViewController.swift in Sources */,
 				447EA50023BD2D9400A3D4F8 /* API.swift in Sources */,
 				447EA51323C3646300A3D4F8 /* WebImageView.swift in Sources */,
 				447EA50723BD31B800A3D4F8 /* UserInfoResponse.swift in Sources */,
+				4407442F23C608E70010A63A /* AuthError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
