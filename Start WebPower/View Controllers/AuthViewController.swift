@@ -10,22 +10,22 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
-    @IBOutlet var authInputView: UIView!
-    
     @IBOutlet var authButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        authInputView.layer.cornerRadius = 10
-        authInputView.clipsToBounds = true
-        
-        authButton.layer.cornerRadius = 10
-        authButton.clipsToBounds = true
+        setupUI()
     }
     
     @IBAction func authViewCloseButtonTap(_ sender: UIBarButtonItem) {
-        //navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AuthViewController {
+    
+    private func setupUI() {
+        authButton.layer.cornerRadius = 10
     }
 }

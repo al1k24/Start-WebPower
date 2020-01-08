@@ -32,23 +32,32 @@ class UserDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupUI()
-        setupLoader()
         
         updateUserInfoUI()
     }
     
+    @objc private func refresh(sender: UIRefreshControl) {
+        updateUserInfoUI{ sender.endRefreshing() }
+    }
+    
+    @IBAction func updateUserInfoTableBarButtonTaped(_ sender: UIBarButtonItem) {
+        updateUserInfoUI()
+    }
+    
+}
+
+extension UserDetailTableViewController {
+    
     private func setupUI() {
+        table.refreshControl = refreshControll
+        
         userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
         userImageView.clipsToBounds = true
         
-        table.refreshControl = refreshControll
-    }
-    
-    private func setupLoader() {
         imageActivityIndicator.hidesWhenStopped = true
     }
     
-    private func updateUserInfoUI(complition: (() -> Void)? = nil) {
+    private func updateUserInfoUI(completion: (() -> Void)? = nil) {
         imageActivityIndicator.startAnimating()
         
         UserService.shared.getUserInfo { [weak self] (userInfo) in
@@ -56,7 +65,7 @@ class UserDetailTableViewController: UITableViewController {
 
             self.configure(with: userInfo)
             
-            complition?()
+            completion?()
         }
     }
     
@@ -80,13 +89,4 @@ class UserDetailTableViewController: UITableViewController {
             default: return "\(age) лет"
         }
     }
-    
-    @objc private func refresh(sender: UIRefreshControl) {
-        updateUserInfoUI{ sender.endRefreshing() }
-    }
-    
-    @IBAction func updateUserInfoTableBarButtonTaped(_ sender: UIBarButtonItem) {
-        updateUserInfoUI()
-    }
-    
 }

@@ -10,23 +10,22 @@ import UIKit
 
 class RegViewController: UIViewController {
 
-    @IBOutlet var regInputView: UIView!
-    
     @IBOutlet var regButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        regInputView.layer.cornerRadius = 10
-        regInputView.clipsToBounds = true
-        
-        regButton.layer.cornerRadius = 10
-        regButton.clipsToBounds = true
+        setupUI()
     }
     
     @IBAction func regViewCloseButtonTap(_ sender: UIBarButtonItem) {
-        //navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }
 
+extension RegViewController {
+    
+    private func setupUI() {
+        regButton.layer.cornerRadius = 10
+    }
+}

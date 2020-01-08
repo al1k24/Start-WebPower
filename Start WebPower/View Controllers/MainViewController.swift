@@ -15,10 +15,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for button in appButtons {
-            button.layer.cornerRadius = 10
-//            button.clipsToBounds = true
-        }
+        setupUI()
     }
 
+    private func setupUI() {
+        for button in appButtons {
+            button.layer.cornerRadius = 10
+        }
+    }
 }

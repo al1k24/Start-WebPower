@@ -76,7 +76,6 @@
 		447EA50523BD318700A3D4F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */,
 				447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */,
 				447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */,
 				447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */,
@@ -87,6 +86,7 @@
 		447EA51423C37B6C00A3D4F8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */,
 				447EA51223C3646300A3D4F8 /* WebImageView.swift */,
 			);
 			path = Helpers;
