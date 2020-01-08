@@ -21,6 +21,10 @@ class AuthViewController: UIViewController {
     @IBAction func authViewCloseButtonTap(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func authButtonTap(_ sender: Any) {
+        
+    }
 }
 
 extension AuthViewController {

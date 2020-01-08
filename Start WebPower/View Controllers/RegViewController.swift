@@ -21,6 +21,10 @@ class RegViewController: UIViewController {
     @IBAction func regViewCloseButtonTap(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func regButtonTap(_ sender: Any) {
+        
+    }
 }
 
 extension RegViewController {
