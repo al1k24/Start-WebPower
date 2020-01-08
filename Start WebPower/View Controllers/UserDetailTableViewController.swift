@@ -84,9 +84,12 @@ extension UserDetailTableViewController {
     
     private func formatAge(_ age: Int) -> String {
         switch age % 10 {
-            case 1: return "\(age) год"
-            case 2...4: return "\(age) года"
-            default: return "\(age) лет"
+            case 1:
+                return "\(age) год"
+            case 2...4:
+                return "\(age) года"
+            default:
+                return "\(age) лет"
         }
     }
 }
