@@ -10,21 +10,16 @@ import Foundation
 
 class Validator {
     
-    static func isRegFormFilled(login: String?, email: String?, password: String?) -> Bool {
-        guard
-            !(login ?? "").isEmpty,
-            !(email ?? "").isEmpty,
-            !(password ?? "").isEmpty else {
-                return false
+    static func isRegFormFilled(login: String, email: String, password: String) -> Bool {
+        guard !(login.isEmpty), !(email.isEmpty), !(password.isEmpty) else {
+            return false
         }
         return true
     }
     
-    static func isAuthFormFilled(login: String?, password: String?) -> Bool {
-        guard
-            !(login ?? "").isEmpty,
-            !(password ?? "").isEmpty else {
-                return false
+    static func isAuthFormFilled(login: String, password: String) -> Bool {
+        guard !(login.isEmpty), !(password.isEmpty) else {
+            return false
         }
         return true
     }

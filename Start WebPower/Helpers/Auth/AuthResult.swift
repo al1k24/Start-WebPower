@@ -9,6 +9,6 @@
 import Foundation
 
 enum AuthResult {
-    case success
+    case success(String)
     case failure(Error)
 }
