@@ -9,7 +9,9 @@
 import Foundation
 
 protocol DataFetcher {
-    func getUserInfo(response: @escaping (UserInfoResponse?) -> Void)
+    func getUserInfo(completion: @escaping (UserInfoResponse?) -> Void)
+    func authUser(login: String, password: String, completion: @escaping (UserAuthResponse?) -> Void)
+    func regUser(login: String, email: String, password: String, completion: @escaping (UserRegResponse?) -> Void)
 }
 
 struct NetworkDataFetcher: DataFetcher {
@@ -20,17 +22,55 @@ struct NetworkDataFetcher: DataFetcher {
         self.networking = networking
     }
     
-    func getUserInfo(response: @escaping (UserInfoResponse?) -> Void) {
+    func getUserInfo(completion: @escaping (UserInfoResponse?) -> Void) {
         let path = API.userData
-        networking.request(path: path, method: .get) { (data, error) in
+        networking.request(path: path, params: nil, method: .get) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
-                response(nil)
+                completion(nil)
             }
             
             let decoded = self.decodeJSON(type: UserInfoResponse.self, from: data)
             
-            response(decoded)
+            completion(decoded)
+        }
+    }
+    
+    func authUser(login: String, password: String, completion: @escaping (UserAuthResponse?) -> Void) {
+        
+        let path = API.auth
+        networking.request(path: path, params: nil, method: .post) { (data, error) in
+            if let error = error {
+                print("Error received requesting data: \(error.localizedDescription)")
+                completion(nil)
+            }
+            
+            let decoded = self.decodeJSON(type: UserAuthResponse.self, from: data)
+            
+            completion(decoded)
+        }
+    }
+    
+    func regUser(login: String, email: String, password: String, completion: @escaping (UserRegResponse?) -> Void) {
+        
+        let path = API.reg
+        let params = [
+            "nickname": "alik",
+            "email": "alik@mail.ru",
+            "password": "alik123"
+        ]
+        
+        networking.request(path: path, params: params, method: .post) { (data, error) in
+            if let error = error {
+                print("Error received requesting data: \(error.localizedDescription)")
+                completion(nil)
+            }
+            
+            print(data!)
+            
+            let decoded = self.decodeJSON(type: UserRegResponse.self, from: data)
+            
+            completion(decoded)
         }
     }
     

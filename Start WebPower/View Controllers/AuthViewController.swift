@@ -10,7 +10,10 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
-    @IBOutlet var authButton: UIButton!
+    @IBOutlet private var authButton: UIButton!
+    
+    @IBOutlet private var authLoginTextField: UITextField!
+    @IBOutlet private var authPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func authButtonTap(_ sender: Any) {
-        
+        auth()
     }
 }
 
@@ -31,5 +34,31 @@ extension AuthViewController {
     
     private func setupUI() {
         authButton.layer.cornerRadius = 10
+    }
+    
+    private func auth() {
+        guard
+            let login = authLoginTextField.text,
+            let password = authPasswordTextField.text
+            else { return }
+        
+        UserService.shared.authUser(login: login,
+                                    password: password) { [weak self] (result) in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let success):
+                self.showAlert(with: "Ура", and: success) {
+                    self.clearForm()
+                }
+            case .failure(let error):
+                self.showAlert(with: "Упс", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func clearForm() {
+        authLoginTextField.text = ""
+        authPasswordTextField.text = ""
     }
 }

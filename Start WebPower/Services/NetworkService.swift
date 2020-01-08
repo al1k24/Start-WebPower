@@ -9,13 +9,13 @@
 import Foundation
 
 protocol Networking {
-    func request(path: String, method: HTTPMethod, completion: @escaping (Data?, Error?) -> Void)
+    func request(path: String, params: [String: String]?, method: HTTPMethod, completion: @escaping (Data?, Error?) -> Void)
 }
 
 final class NetworkService: Networking {
     
-    func request(path: String, method: HTTPMethod, completion: @escaping (Data?, Error?) -> Void) {
-        guard let url = self.url(from: path) else { return }
+    func request(path: String, params: [String: String]?, method: HTTPMethod, completion: @escaping (Data?, Error?) -> Void) {
+        guard let url = self.url(from: path, params: params) else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
@@ -32,11 +32,15 @@ final class NetworkService: Networking {
         })
     }
     
-    private func url(from path: String) -> URL? {
+    private func url(from path: String, params: [String: String]?) -> URL? {
         var components = URLComponents()
         components.scheme = API.scheme
         components.host = API.host
         components.path = API.path + path
+        
+        if let params = params, !(params.isEmpty) {
+            components.queryItems = params.map{ URLQueryItem(name: $0, value: $1) }
+        }
         return components.url
     }
 }

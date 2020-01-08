@@ -164,6 +164,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="authButton" destination="s4k-fx-IfM" id="n7V-up-vdW"/>
+                        <outlet property="authLoginTextField" destination="To8-qO-atk" id="8q8-4S-Zzb"/>
+                        <outlet property="authPasswordTextField" destination="gb4-PF-S51" id="tN7-Bm-ijm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpE-MR-nL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -234,6 +236,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="authEmailTextField" destination="FiR-et-F6g" id="aAi-ea-0mI"/>
+                        <outlet property="authLoginTextField" destination="HUF-QF-mK1" id="z4B-aq-4Ed"/>
+                        <outlet property="authPasswordTextField" destination="IFE-c8-UX5" id="k6C-Cw-5Hw"/>
                         <outlet property="regButton" destination="NpG-Aj-5oi" id="9PM-A1-Q4s"/>
                     </connections>
                 </viewController>
