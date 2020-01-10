@@ -14,6 +14,7 @@ enum AuthError {
     case unknownError
     case serverError
     case responseError(String)
+    case invalidLenght(Int, Int)
 }
 
 extension AuthError: LocalizedError {
@@ -29,6 +30,8 @@ extension AuthError: LocalizedError {
             return NSLocalizedString("Ошибка сервера", comment: "")
         case .responseError(let error):
             return NSLocalizedString(error, comment: "")
+        case .invalidLenght(let min, let max):
+            return NSLocalizedString("Учитывайте диапазон: \(min)-\(max) символов", comment: "")
         }
     }
 }

@@ -34,6 +34,12 @@ class UserService {
             return
         }
         
+        let min = 3, max = 10
+        guard Validator.isValidLen(password, min: min, max: max) else {
+            completion(.failure(AuthError.invalidLenght(min, max)))
+            return
+        }
+        
         fetcher.authUser(login: login, password: password) { (response, error) in
             if let error = error {
                 completion(.failure(AuthError.responseError(error.localizedDescription)))
@@ -67,6 +73,12 @@ class UserService {
         
         guard Validator.isValidEmail(email) else {
             completion(.failure(AuthError.invalidEmail))
+            return
+        }
+        
+        let min = 3, max = 10
+        guard Validator.isValidLen(password, min: min, max: max) else {
+            completion(.failure(AuthError.invalidLenght(min, max)))
             return
         }
         

@@ -24,6 +24,10 @@ class Validator {
         return true
     }
     
+    static func isValidLen(_ field: String, min: Int, max: Int) -> Bool {
+        return min...max ~= field.count
+    }
+    
     static func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "^.+@.+\\..{2,}$"
         return check(text: email, regEx: emailRegEx)
