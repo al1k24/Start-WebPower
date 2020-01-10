@@ -1,5 +1,5 @@
 //
-//  AuthViewController.swift
+//  RegViewController.swift
 //  Start WebPower
 //
 //  Created by Алик on 12/27/19.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
-    @IBOutlet private var authButton: UIButton!
+    @IBOutlet var regButton: UIButton!
     
     @IBOutlet private var authLoginTextField: UITextField!
+    @IBOutlet private var authEmailTextField: UITextField!
     @IBOutlet private var authPasswordTextField: UITextField!
     
     override func viewDidLoad() {
@@ -21,29 +22,31 @@ class AuthViewController: UIViewController {
         setupUI()
     }
     
-    @IBAction func authButtonTap(_ sender: Any) {
-        auth()
+    @IBAction func regButtonTap(_ sender: Any) {
+        register()
     }
+    
 }
 
-extension AuthViewController {
+extension RegisterViewController {
     
     private func setupUI() {
-        authButton.layer.cornerRadius = 10
+        regButton.layer.cornerRadius = 10
     }
     
-    private func auth() {
+    private func register() {
         guard
             let login = authLoginTextField.text,
+            let email = authEmailTextField.text,
             let password = authPasswordTextField.text
-            else { return }
+        else { return }
         
-        UserService.shared.authUser(login: login, password: password) { [weak self] (result) in
+        UserService.shared.registerUser(login: login, email: email, password: password) { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {
-            case .success(_):
-                self.performSegue(withIdentifier: "userDetailSegue", sender: nil)
+            case .success(let success):
+                self.showAlert(with: "Ура", and: success)
                 self.clearForm()
             case .failure(let error):
                 self.showAlert(with: "Упс", and: error.localizedDescription)
@@ -53,6 +56,7 @@ extension AuthViewController {
     
     private func clearForm() {
         authLoginTextField.text = ""
+        authEmailTextField.text = ""
         authPasswordTextField.text = ""
     }
 }

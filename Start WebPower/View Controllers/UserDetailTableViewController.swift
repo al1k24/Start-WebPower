@@ -10,8 +10,6 @@ import UIKit
 
 class UserDetailTableViewController: UITableViewController {
     
-    @IBOutlet private var table: UITableView!
-    
     @IBOutlet private var userImageView: WebImageView!
     @IBOutlet private var imageActivityIndicator: UIActivityIndicatorView!
     
@@ -21,13 +19,6 @@ class UserDetailTableViewController: UITableViewController {
     
     @IBOutlet private var userEmailButton: UIButton!
     
-    private let refreshControll: UIRefreshControl = {
-        let rc = UIRefreshControl()
-        rc.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
-        
-        return rc
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,36 +27,25 @@ class UserDetailTableViewController: UITableViewController {
         updateUserInfoUI()
     }
     
-    @objc private func refresh(sender: UIRefreshControl) {
-        updateUserInfoUI{ sender.endRefreshing() }
+    @IBAction func logOutButtonTap(_ sender: Any) {
+        dismiss(animated: true)
     }
-    
-    @IBAction func updateUserInfoTableBarButtonTaped(_ sender: UIBarButtonItem) {
-        updateUserInfoUI()
-    }
-    
 }
 
 extension UserDetailTableViewController {
     
     private func setupUI() {
-        table.refreshControl = refreshControll
-        
         userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
         userImageView.clipsToBounds = true
         
         imageActivityIndicator.hidesWhenStopped = true
     }
     
-    private func updateUserInfoUI(completion: (() -> Void)? = nil) {
+    private func updateUserInfoUI() {
         imageActivityIndicator.startAnimating()
         
         UserService.shared.getUserInfo { [weak self] (userInfo) in
-            guard let self = self else { return }
-
-            self.configure(with: userInfo)
-            
-            completion?()
+            self?.configure(with: userInfo)
         }
     }
     

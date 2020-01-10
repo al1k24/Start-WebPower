@@ -13,7 +13,7 @@ struct API {
     static let host = "start.webpower.cf"
     static let path = "/test"
     
-    static let reg = "/register"
-    static let auth = "/auth"
-    static let userData = "/data"
+    static let auth = "/auth/"
+    static let userData = "/data/"
+    static let register = "/register/"
 }

@@ -15,7 +15,7 @@ class UserService {
     var networking: Networking
     var fetcher: DataFetcher
     
-    init() {
+    private init() {
         self.networking = NetworkService()
         self.fetcher = NetworkDataFetcher(networking: networking)
     }
@@ -34,19 +34,24 @@ class UserService {
             return
         }
         
-        fetcher.authUser(login: login, password: password) { (response) in
+        fetcher.authUser(login: login, password: password) { (response, error) in
+            if let error = error {
+                completion(.failure(AuthError.responseError(error.localizedDescription)))
+                return
+            }
+            
             guard let response = response else {
                 completion(.failure(AuthError.serverError))
                 return
             }
             
-            if let success = response.success, !(success.isEmpty) {
-                completion(.success(success))
+            if let error = response.error, !(error.isEmpty) {
+                completion(.failure(AuthError.responseError(error)))
                 return
             }
             
-            if let error = response.error, !(error.isEmpty) {
-                completion(.failure(AuthError.responseError(error)))
+            if let success = response.success, !(success.isEmpty) {
+                completion(.success(success))
                 return
             }
             
@@ -54,25 +59,35 @@ class UserService {
         }
     }
     
-    func regUser(login: String, email: String, password: String, completion: @escaping (AuthResult) -> Void) {
-        guard Validator.isRegFormFilled(login: login, email: email, password: password) else {
+    func registerUser(login: String, email: String, password: String, completion: @escaping (AuthResult) -> Void) {
+        guard Validator.isRegistrationFormFilled(login: login, email: email, password: password) else {
             completion(.failure(AuthError.notFilled))
             return
         }
         
-        fetcher.regUser(login: login, email: email, password: password) { (response) in
+        guard Validator.isValidEmail(email) else {
+            completion(.failure(AuthError.invalidEmail))
+            return
+        }
+        
+        fetcher.registerUser(login: login, email: email, password: password) { (response, error) in
+            if let error = error {
+                completion(.failure(AuthError.responseError(error.localizedDescription)))
+                return
+            }
+            
             guard let response = response else {
                 completion(.failure(AuthError.serverError))
                 return
             }
             
-            if let success = response.success, !(success.isEmpty) {
-                completion(.success(success))
+            if let error = response.error {
+                completion(.failure(AuthError.responseError(error)))
                 return
             }
-
-            if let error = response.error, !(error.isEmpty) {
-                completion(.failure(AuthError.responseError(error)))
+            
+            if let success = response.success {
+                completion(.success(success))
                 return
             }
             

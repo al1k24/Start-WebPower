@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
     @IBOutlet var regButton: UIButton!
     
@@ -27,24 +27,25 @@ class RegViewController: UIViewController {
     }
     
     @IBAction func regButtonTap(_ sender: Any) {
-        reg()
+        register()
     }
+    
 }
 
-extension RegViewController {
+extension RegisterViewController {
     
     private func setupUI() {
         regButton.layer.cornerRadius = 10
     }
     
-    private func reg() {
+    private func register() {
         guard
             let login = authLoginTextField.text,
             let email = authEmailTextField.text,
             let password = authPasswordTextField.text
         else { return }
         
-        UserService.shared.regUser(login: login, email: email, password: password) { [weak self] (result) in
+        UserService.shared.registerUser(login: login, email: email, password: password) { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {

@@ -10,17 +10,18 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet var appButtons: [UIButton]!
+    @IBOutlet private var appButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
     }
-
+    
     private func setupUI() {
         for button in appButtons {
             button.layer.cornerRadius = 10
         }
     }
+    
 }

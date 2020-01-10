@@ -10,7 +10,7 @@ import Foundation
 
 class Validator {
     
-    static func isRegFormFilled(login: String, email: String, password: String) -> Bool {
+    static func isRegistrationFormFilled(login: String, email: String, password: String) -> Bool {
         guard !(login.isEmpty), !(email.isEmpty), !(password.isEmpty) else {
             return false
         }
@@ -24,7 +24,7 @@ class Validator {
         return true
     }
     
-    static func isEmail(_ email: String) -> Bool {
+    static func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "^.+@.+\\..{2,}$"
         return check(text: email, regEx: emailRegEx)
     }

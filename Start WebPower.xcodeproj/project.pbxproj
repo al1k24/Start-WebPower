@@ -11,12 +11,14 @@
 		4407442F23C608E70010A63A /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407442E23C608E70010A63A /* AuthError.swift */; };
 		4407443123C60A460010A63A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407443023C60A460010A63A /* Validator.swift */; };
 		4407443323C610DD0010A63A /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407443223C610DD0010A63A /* AuthResult.swift */; };
+		4407445623C878970010A63A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407445523C878970010A63A /* RegisterViewController.swift */; };
+		4407445823C8F8470010A63A /* String + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407445723C8F8470010A63A /* String + Extention.swift */; };
+		4407445A23C8FA400010A63A /* UserRegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407445923C8FA400010A63A /* UserRegistrationResponse.swift */; };
 		447EA50023BD2D9400A3D4F8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA4FF23BD2D9400A3D4F8 /* API.swift */; };
 		447EA50223BD2F2C00A3D4F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */; };
 		447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */; };
 		447EA50723BD31B800A3D4F8 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */; };
 		447EA50923BD31C800A3D4F8 /* UserAuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */; };
-		447EA50B23BD31E900A3D4F8 /* UserRegResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */; };
 		447EA50D23BD36A100A3D4F8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50C23BD36A100A3D4F8 /* UserService.swift */; };
 		447EA50F23BD38BB00A3D4F8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */; };
 		447EA51323C3646300A3D4F8 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EA51223C3646300A3D4F8 /* WebImageView.swift */; };
@@ -25,7 +27,6 @@
 		44949C8D23B681150069C170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44949C8B23B681150069C170 /* Main.storyboard */; };
 		44949C8F23B681160069C170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44949C8E23B681160069C170 /* Assets.xcassets */; };
 		44949C9223B681160069C170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44949C9023B681160069C170 /* LaunchScreen.storyboard */; };
-		44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9923B6ADE20069C170 /* RegViewController.swift */; };
 		44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9B23B6ADF10069C170 /* AuthViewController.swift */; };
 		44949CA023B77E050069C170 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949C9F23B77E050069C170 /* MainViewController.swift */; };
 		44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */; };
@@ -36,12 +37,14 @@
 		4407442E23C608E70010A63A /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		4407443023C60A460010A63A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		4407443223C610DD0010A63A /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		4407445523C878970010A63A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4407445723C8F8470010A63A /* String + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extention.swift"; sourceTree = "<group>"; };
+		4407445923C8FA400010A63A /* UserRegistrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationResponse.swift; sourceTree = "<group>"; };
 		447EA4FF23BD2D9400A3D4F8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		447EA50123BD2F2C00A3D4F8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		447EA50323BD313700A3D4F8 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
 		447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthResponse.swift; sourceTree = "<group>"; };
-		447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegResponse.swift; sourceTree = "<group>"; };
 		447EA50C23BD36A100A3D4F8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		447EA51223C3646300A3D4F8 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
@@ -52,7 +55,6 @@
 		44949C8E23B681160069C170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44949C9123B681160069C170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44949C9323B681160069C170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44949C9923B6ADE20069C170 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		44949C9B23B6ADF10069C170 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		44949C9F23B77E050069C170 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +96,9 @@
 		447EA50523BD318700A3D4F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				447EA50A23BD31E900A3D4F8 /* UserRegResponse.swift */,
 				447EA50823BD31C800A3D4F8 /* UserAuthResponse.swift */,
 				447EA50623BD31B800A3D4F8 /* UserInfoResponse.swift */,
+				4407445923C8FA400010A63A /* UserRegistrationResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +110,7 @@
 				447EA50E23BD38BB00A3D4F8 /* HTTPMethod.swift */,
 				447EA51223C3646300A3D4F8 /* WebImageView.swift */,
 				4407442C23C605350010A63A /* UIAlertController + Extension.swift */,
+				4407445723C8F8470010A63A /* String + Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -147,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				44949C9F23B77E050069C170 /* MainViewController.swift */,
-				44949C9923B6ADE20069C170 /* RegViewController.swift */,
+				4407445523C878970010A63A /* RegisterViewController.swift */,
 				44949C9B23B6ADF10069C170 /* AuthViewController.swift */,
 				44949CA623BCB1B20069C170 /* UserDetailTableViewController.swift */,
 			);
@@ -243,8 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4407442D23C605350010A63A /* UIAlertController + Extension.swift in Sources */,
-				447EA50B23BD31E900A3D4F8 /* UserRegResponse.swift in Sources */,
 				447EA50923BD31C800A3D4F8 /* UserAuthResponse.swift in Sources */,
+				4407445A23C8FA400010A63A /* UserRegistrationResponse.swift in Sources */,
 				447EA50F23BD38BB00A3D4F8 /* HTTPMethod.swift in Sources */,
 				44949C8623B681150069C170 /* AppDelegate.swift in Sources */,
 				44949C9C23B6ADF10069C170 /* AuthViewController.swift in Sources */,
@@ -253,13 +256,14 @@
 				447EA50D23BD36A100A3D4F8 /* UserService.swift in Sources */,
 				44949CA723BCB1B20069C170 /* UserDetailTableViewController.swift in Sources */,
 				4407443123C60A460010A63A /* Validator.swift in Sources */,
-				44949C9A23B6ADE20069C170 /* RegViewController.swift in Sources */,
 				4407443323C610DD0010A63A /* AuthResult.swift in Sources */,
 				447EA50423BD313700A3D4F8 /* NetworkDataFetcher.swift in Sources */,
 				44949CA023B77E050069C170 /* MainViewController.swift in Sources */,
 				447EA50023BD2D9400A3D4F8 /* API.swift in Sources */,
 				447EA51323C3646300A3D4F8 /* WebImageView.swift in Sources */,
+				4407445823C8F8470010A63A /* String + Extention.swift in Sources */,
 				447EA50723BD31B800A3D4F8 /* UserInfoResponse.swift in Sources */,
+				4407445623C878970010A63A /* RegisterViewController.swift in Sources */,
 				4407442F23C608E70010A63A /* AuthError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
