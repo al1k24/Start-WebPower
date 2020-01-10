@@ -184,7 +184,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Зарегистрироваться"/>
                                 <connections>
-                                    <action selector="regButtonTap:" destination="SB5-it-JcG" eventType="touchUpInside" id="EoC-ko-KTl"/>
+                                    <action selector="registerButtonTap:" destination="SB5-it-JcG" eventType="touchUpInside" id="EoC-ko-KTl"/>
                                 </connections>
                             </button>
                         </subviews>

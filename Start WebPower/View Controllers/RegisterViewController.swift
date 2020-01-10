@@ -20,9 +20,10 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupKeyboard()
     }
     
-    @IBAction func regButtonTap(_ sender: Any) {
+    @IBAction func registerButtonTap(_ sender: Any) {
         register()
     }
     
@@ -32,6 +33,16 @@ extension RegisterViewController {
     
     private func setupUI() {
         regButton.layer.cornerRadius = 10
+    }
+    
+    private func setupKeyboard() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func register() {

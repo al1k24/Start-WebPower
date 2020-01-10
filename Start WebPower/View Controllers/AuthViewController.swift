@@ -19,6 +19,7 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupKeyboard()
     }
     
     @IBAction func authButtonTap(_ sender: Any) {
@@ -30,6 +31,16 @@ extension AuthViewController {
     
     private func setupUI() {
         authButton.layer.cornerRadius = 10
+    }
+    
+    private func setupKeyboard() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func auth() {
