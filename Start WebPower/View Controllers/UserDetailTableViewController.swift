@@ -58,8 +58,17 @@ extension UserDetailTableViewController {
     private func updateUserInfoUI() {
         imageActivityIndicator.startAnimating()
         
-        UserService.shared.getUserInfo { [weak self] (userInfo) in
-            self?.configure(with: userInfo)
+        UserService.shared.getUserInfo { [weak self] (result, userInfo) in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(_):
+                if let userInfo = userInfo {
+                    self.configure(with: userInfo)
+                }
+            case .failure(let error):
+                self.showAlert(with: "Упс", and: error.localizedDescription)
+            }
         }
     }
     

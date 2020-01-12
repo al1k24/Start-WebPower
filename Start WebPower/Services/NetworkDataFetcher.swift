@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DataFetcher {
-    func getUserInfo(completion: @escaping (UserInfoResponse?) -> Void)
+    func getUserInfo(completion: @escaping (UserInfoResponse?, Error?) -> Void)
     func authUser(login: String, password: String, completion: @escaping (UserAuthResponse?, Error?) -> Void)
     func registerUser(login: String, email: String, password: String, completion: @escaping (UserRegistrationResponse?, Error?) -> Void)
 }
@@ -22,16 +22,11 @@ class NetworkDataFetcher: DataFetcher {
         self.networking = networking
     }
     
-    func getUserInfo(completion: @escaping (UserInfoResponse?) -> Void) {
+    func getUserInfo(completion: @escaping (UserInfoResponse?, Error?) -> Void) {
         let path = API.userData
         networking.request(path: path, method: .get, httpBody: nil) { [weak self] (data, error) in
-            if let error = error {
-                print("Error received requesting data: \(error.localizedDescription)")
-                completion(nil)
-            }
-            
             let decoded = self?.decodeJSON(type: UserInfoResponse.self, from: data)
-            completion(decoded)
+            completion(decoded, error)
         }
     }
     

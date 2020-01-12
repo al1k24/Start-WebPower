@@ -20,11 +20,19 @@ class UserService {
         self.fetcher = NetworkDataFetcher(networking: networking)
     }
     
-    func getUserInfo(completion: @escaping (UserInfoResponse) -> Void) { //Обработать ошибки
-        fetcher.getUserInfo() { (response) in
-            guard let response = response else { return }
+    func getUserInfo(completion: @escaping (AuthResult, UserInfoResponse?) -> Void) {
+        fetcher.getUserInfo() { (response, error) in
+            if let error = error {
+                completion(.failure(AuthError.responseError(error.localizedDescription)), nil)
+                return
+            }
             
-            completion(response)
+            guard let response = response else {
+                completion(.failure(AuthError.serverError), nil)
+                return
+            }
+            
+            completion(.success(""), response)
         }
     }
     
