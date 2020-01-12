@@ -318,8 +318,10 @@
                     <connections>
                         <outlet property="imageActivityIndicator" destination="AET-8m-32d" id="rHf-eC-tIL"/>
                         <outlet property="userActivityLabel" destination="1h9-P6-iYX" id="1NW-kn-x2Y"/>
+                        <outlet property="userActivityTitleLabel" destination="yRd-sV-AIy" id="xRu-hh-KA3"/>
                         <outlet property="userAgeLabel" destination="z7J-fh-1sr" id="ELX-37-Td1"/>
                         <outlet property="userEmailButton" destination="xoH-qy-tzz" id="drB-aC-9sP"/>
+                        <outlet property="userEmailTitleLabel" destination="Wr6-Hj-sjS" id="VQK-3z-OeZ"/>
                         <outlet property="userImageView" destination="7S2-fX-BX7" id="reA-AI-T0e"/>
                         <outlet property="userNameLabel" destination="vvV-Iu-7BR" id="2pg-xq-4BW"/>
                     </connections>

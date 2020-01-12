@@ -17,6 +17,9 @@ class UserDetailTableViewController: UITableViewController {
     @IBOutlet private var userNameLabel: UILabel!
     @IBOutlet private var userActivityLabel: UILabel!
     
+    @IBOutlet private var userEmailTitleLabel: UILabel!
+    @IBOutlet private var userActivityTitleLabel: UILabel!
+    
     @IBOutlet private var userEmailButton: UIButton!
     
     override func viewDidLoad() {
@@ -39,6 +42,17 @@ extension UserDetailTableViewController {
         userImageView.clipsToBounds = true
         
         imageActivityIndicator.hidesWhenStopped = true
+        
+        showOrHideUI()
+    }
+    
+    private func showOrHideUI() {
+        userEmailTitleLabel.isHidden = !userEmailTitleLabel.isHidden
+        userActivityTitleLabel.isHidden = !userActivityTitleLabel.isHidden
+        
+        userAgeLabel.isHidden = !userAgeLabel.isHidden
+        userNameLabel.isHidden = !userNameLabel.isHidden
+        userActivityLabel.isHidden = !userActivityLabel.isHidden
     }
     
     private func updateUserInfoUI() {
@@ -59,6 +73,7 @@ extension UserDetailTableViewController {
         
         userImageView.set(imageURL: userInfo.image) { [weak self] in
             self?.imageActivityIndicator.stopAnimating()
+            self?.showOrHideUI()
         }
     }
     
