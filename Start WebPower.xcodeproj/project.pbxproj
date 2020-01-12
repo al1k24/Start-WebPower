@@ -81,6 +81,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		4407445B23CB37010010A63A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44949C8E23B681160069C170 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		447EA4FE23BD2D6900A3D4F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +148,7 @@
 				447EA51423C37B6C00A3D4F8 /* Helpers */,
 				44949CA223B781C20069C170 /* Storyboards */,
 				44949CA323B781DC0069C170 /* Supporting Files */,
-				44949C9323B681160069C170 /* Info.plist */,
-				44949C8E23B681160069C170 /* Assets.xcassets */,
+				4407445B23CB37010010A63A /* Resources */,
 			);
 			path = "Start WebPower";
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				44949C8523B681150069C170 /* AppDelegate.swift */,
+				44949C9323B681160069C170 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -410,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CDW888W99;
-				INFOPLIST_FILE = "Start WebPower/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Start WebPower/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CDW888W99;
-				INFOPLIST_FILE = "Start WebPower/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Start WebPower/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
