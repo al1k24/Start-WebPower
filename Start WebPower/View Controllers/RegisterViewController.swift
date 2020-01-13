@@ -10,7 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet var regButton: UIButton!
+    @IBOutlet private var regButton: UIButton!
     
     @IBOutlet private var authLoginTextField: UITextField!
     @IBOutlet private var authEmailTextField: UITextField!
